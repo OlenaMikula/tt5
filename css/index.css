@@ -19,6 +19,7 @@ body {
     font-family: sans-serif;
     margin-left: 3px;
     margin-right: 3px;
+    max-width: 1800px;
 }
 ol,ul {list-style: none;}
 * {
@@ -32,22 +33,25 @@ ol,ul {list-style: none;}
 }
 a, a:hover {text-decoration: none}
 
-
-.square1 h1 {
-    font-size: 150%;
+.square1 {
+    min-width: 900px;
+}
+h1 {
+    font-size: 225%;
     font-weight: lighter;
-    margin-top: 20px;
+    margin-top: 50px;
 }
 .square1 button {
-    color: #828384;
-    padding: 5px 10px;
+    color: #646465;
+    padding: 7px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 11px;
-    margin: 30px 2px;
+    font-size: 17px;
+    font-weight: lighter;
+    margin: 30px 5px;
     cursor: pointer;
-    background-color: #cfd0d2;
+    background-color: #e3eafb;
     border: none;
 }
 .square1 button:hover {
@@ -56,15 +60,39 @@ a, a:hover {text-decoration: none}
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
 .square2 {
-    margin: 10%;
+    margin-left: 10%;
+    margin-top: 50px;
     max-width: 100%;
-    min-width: 5%;
+    min-width: 900px;
 }
 .square2 figure {
-    max-width: 350px;
-    min-width: 50px;
-    height: auto;
+    max-width: 380px;
+    transition: .5s ease;
+    opacity: 0.7;
+    margin-bottom: 100px;
 }
+@media (min-width: 1600px) and (max-width: 1800px) {
+    .square2 figure {
+    max-width: 340px;
+    }
+}
+@media (min-width: 1400px) and (max-width: 1599px) {
+    .square2 figure {
+    max-width: 300px;
+    }
+}
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .square2 figure {
+    max-width: 260px;
+    }
+}
+@media (min-width: 1060px) and (max-width: 1199px) {
+    .square2 figure {
+    max-width: 225px;
+    }
+}
+
+
 .square2 .p1, .p2, .p3, .p4 {
     float: left; 
 }
@@ -72,3 +100,19 @@ a, a:hover {text-decoration: none}
     max-width: 90%;
     min-width: 5%;
 }
+figure:hover {
+    opacity: 1;
+}
+.square2 i {
+    font-size: 17px;
+}
+.square3 {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+.square4 {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 100px;
+}
+
