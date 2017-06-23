@@ -37,11 +37,11 @@ a, a:hover {text-decoration: none}
     min-width: 900px;
 }
 h1 {
+    line-height: 4;
     font-size: 225%;
     font-weight: lighter;
-    margin-top: 50px;
 }
-.square1 button {
+.square1 li {
     color: #646465;
     padding: 7px 20px;
     text-align: center;
@@ -54,11 +54,56 @@ h1 {
     background-color: #e3eafb;
     border: none;
 }
-.square1 button:hover {
+.square1 li:hover {
     background-color: #4579f3;
     color: white;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+.cf:after {
+    clear: both;
+}
+.cf {
+    *zoom: 1;
+}
+ul.navbar li {
+	margin: 0;
+	position: relative;
+}
+ul.navbar li a {
+	display: block;
+	padding: 7px 20px;
+	color: #646465;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: all .2s ease-in-out;
+}
+ul.navbar li a:hover,
+ul.navbar li:hover > a {
+	background: #4579f3;
+	color: #fff !important;
+}
+ul.navbar li ul {
+  margin: 0;
+  position: absolute;
+  background: #222;
+  left: 10%;
+  font-size: 10px;
+  min-width: 170px;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 99;
+  transition: all .1s ease;
+}
+ul.navbar ul li { float: none; }
+ul.navbar li:hover > ul { opacity: 1; visibility: visible; left: 0; max-height: 250px }
+ul.navbar > li:hover > ul { opacity: 1; visibility: visible; top: 100%; left: 0; }
+ul.navbar li > ul  ul { top: 0; left: 90%; }
+ul.navbar li > ul li:hover > ul { left: 100%; }
 .square2 {
     margin-left: 10%;
     margin-top: 50px;
@@ -113,6 +158,181 @@ figure:hover {
 .square4 {
     margin-left: 10%;
     margin-right: 10%;
+    margin-top: 30px;
+}
+.square4 img:hover {
+    width: 80px;
+}
+.square5, .square6 {
+    margin-top: 50px;
+    min-width: 900px;
+}
+.img1 {
+    float: left;
+    margin-left: 15%;
+}
+.img {
+    float: left;
+    margin-left: 7%;
+}
+.img img, .img1 img {
+    transition: .5s ease;
+    width: 300px;
+}
+.buy {
+    float: left;
+    text-align: left;
+    margin-left: 2%;
     margin-top: 100px;
+    font-size: 20px;
+}
+.buy button {
+    color: #646465;
+    padding: 6px 7px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+    font-weight: lighter;
+    margin: 30px 5px;
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid #646465;
+}
+.buy button:hover {
+    background-color: #4579f3;
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    border: none;
+}
+.buy p {
+    line-height: 2;
+    margin-bottom: 50px;
+}
+@media (min-width: 1360px) and (max-width: 1600px) {
+    .square5 .img img, .img1 img {
+        width: 230px;
+    }
+    .square6 .img img, .img1 img {
+        width: 230px;
+    }
+    .buy {
+        margin-top: 50px;
+    }
+}
+@media (min-width: 1200px) and (max-width: 1359px) {
+    .square5 .img img, .img1 img {
+        width: 200px;
+    }
+    .square6 .img img, .img1 img {
+        width: 200px;
+    }
+    .buy {
+        margin-top: 30px;
+    }
+    .buy button {
+        margin: 15px 3px;
+        font-size: 14px;
+    }
+}
+@media (max-width: 1199px) {
+    .square5 .img img, .img1 img {
+        width: 170px;
+    }
+    .square6 .img img, .img1 img {
+        width: 170px;
+    }
+    .img {
+        margin-left: 2%;
+    }
+    .buy {
+        margin-top: 20px;
+    }
+    .buy button {
+        margin: 10px 3px;
+        font-size: 10px;
+    }
+}
+.square6 {
+    display: none;
+}
+.square4 img:hover .square5{
+    visibility: hidden;
+}
+.square4 img:hover .square6{
+    visibility: visible;
+}
+.square7 {
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 35%;
+    min-width: 900px;
+}
+.square7 figure {
+    float: left;
+    margin-top: 50px;
+    width: 375px;
+    margin-bottom: 75px;
+}
+.arrow {
+    margin-top: 75px;
+    float: left;
+}
+.square7 h2 {
+    font-weight: lighter;
+    font-style: normal;
+    line-height: 2;
+}
+@media (min-width: 1645px) and (max-width: 1850px) {
+    .square7 figure {
+    width: 335px;
+}
+ .square7 figure img{
+    width: 100px;
+}
+}
+@media (min-width: 1500px) and (max-width: 1644px) {
+    .square7 figure {
+    width: 300px;
+}
+    .square7 figure img{
+    width: 90px;
+}
+}
+@media (min-width: 1395px) and (max-width: 1499px) {
+    .square7 figure {
+    width: 300px;
+    font-size: 13px;
+}
+    .square7 figure img{
+    width: 70px;
+}
+    .arrow {
+        width: 30px;
+    }
+}
+@media (min-width: 1225px) and (max-width: 1394px) {
+    .square7 figure {
+    width: 270px;
+    font-size: 13px;
+}
+    .square7 figure img{
+    width: 60px;
+}
+    .arrow {
+        width: 15px;
+    }
+}
+@media(max-width: 1224px) {
+    .square7 figure {
+    width: 230px;
+    font-size: 13px;
+}
+    .square7 figure img{
+    width: 60px;
+}
+    .arrow {
+        visibility: hidden;
+    }
 }
 
